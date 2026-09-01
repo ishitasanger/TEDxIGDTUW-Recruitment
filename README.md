@@ -46,7 +46,7 @@ The team matcher especially helps students who are unsure about which team would
 
 ### HTML, CSS & JavaScript
 
-I used vanilla HTML, CSS and JavaScript to keep the prototype lightweight and achievable within the 60–90 minute assessment constraint.
+I used HTML, CSS and JavaScript to keep the prototype lightweight and achievable within the 60–90 minute assessment constraint.
 
 ### Interactive Team Matcher
 
@@ -139,4 +139,4 @@ https://tedxigdtuwrecruitmentportal-alpha.vercel.app/
 ## Repository
 
 **GitHub:**  
-_Add GitHub repository link here_
+https://github.com/ishitasanger/TEDxIGDTUW-Recruitment
