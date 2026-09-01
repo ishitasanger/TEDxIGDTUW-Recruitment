@@ -1,0 +1,934 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: white;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   LANDING
+===================================================== */
+
+#landing {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(230, 43, 30, 0.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(120, 15, 10, 0.12),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #0b0505 0%,
+            #080808 45%,
+            #090707 100%
+        );
+}
+
+
+/* Large soft red glow */
+
+#landing::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: -220px;
+    left: -180px;
+
+    background: rgba(230, 43, 30, 0.16);
+
+    filter: blur(130px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* Bottom red glow */
+
+#landing::after {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    bottom: -250px;
+    right: -150px;
+
+    background: rgba(230, 43, 30, 0.11);
+
+    filter: blur(120px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* Hero content */
+
+.hero {
+    max-width: 850px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* TEDx IGDTUW */
+
+.small-heading {
+    letter-spacing: 4px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 22px;
+
+    color: #ffffff;
+}
+
+
+/* Gold divider */
+
+.gold-divider {
+    color: #d4af37;
+
+    margin: 20px 0;
+
+    font-size: 20px;
+}
+
+
+/* Main heading */
+
+.hero h1 {
+    font-size: 68px;
+
+    line-height: 1.05;
+
+    margin-bottom: 28px;
+
+    letter-spacing: -2px;
+
+    text-shadow:
+        0 4px 30px rgba(0, 0, 0, 0.35);
+}
+
+.hero h1 span {
+    color: #e62b1e;
+}
+
+
+/* Hero description */
+
+.hero-text {
+    max-width: 650px;
+
+    margin: 0 auto 38px;
+
+    color: #b9b9c2;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.primary-btn {
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f02d20,
+            #d91f14
+        );
+
+    color: white;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+
+    box-shadow:
+        0 8px 25px rgba(230, 43, 30, 0.18);
+}
+
+.primary-btn:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #ff3b30,
+            #e62b1e
+        );
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 35px rgba(230, 43, 30, 0.30);
+}
+
+
+/* =====================================================
+   TEAMS
+===================================================== */
+
+#teams {
+    padding: 100px 7%;
+
+    position: relative;
+    z-index: 1;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(230, 43, 30, 0.07),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(212, 175, 55, 0.05),
+            transparent 30%
+        );
+}
+
+.section-heading {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 60px;
+}
+
+.section-heading h2 {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.section-heading h2 span {
+    color: #e62b1e;
+}
+
+.section-heading p {
+    color: #a7a7b0;
+}
+
+
+/* =====================================================
+   TEAM CARDS
+===================================================== */
+
+.team-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.team-card {
+    width: 270px;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1b1718 0%,
+            #131316 48%,
+            #0d0d10 100%
+        );
+
+    border: 1px solid #292932;
+
+    border-radius: 18px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Subtle red glow */
+
+.team-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    top: -75px;
+    right: -55px;
+
+    background: rgba(230, 43, 30, 0.14);
+
+    filter: blur(40px);
+
+    border-radius: 50%;
+}
+
+
+/* Gold accent */
+
+.team-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 30px;
+    top: 0;
+
+    width: 48px;
+    height: 3px;
+
+    background: #d4af37;
+
+    border-radius: 0 0 5px 5px;
+}
+
+
+/* Hover */
+
+.team-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #e62b1e;
+
+    box-shadow:
+        0 15px 35px rgba(230, 43, 30, 0.14);
+}
+
+
+/* =====================================================
+   TEAM CONTENT
+===================================================== */
+
+.team-icon {
+    font-size: 35px;
+
+    margin-bottom: 20px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.team-card h3 {
+    font-size: 23px;
+
+    margin-bottom: 12px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.team-card p {
+    color: #a7a7b0;
+
+    font-size: 14px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.team-card h4 {
+    margin-top: 20px;
+
+    margin-bottom: 5px;
+
+    font-size: 13px;
+
+    color: #d4af37;
+
+    letter-spacing: 0.5px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =====================================================
+   MATCHER CTA
+===================================================== */
+
+.matcher-cta {
+    margin: 90px auto 0;
+
+    max-width: 700px;
+
+    text-align: center;
+
+    padding: 50px 30px;
+
+    border: 1px solid #292932;
+
+    border-radius: 20px;
+
+    background: #111116;
+}
+
+.matcher-cta h2 {
+    margin-bottom: 10px;
+}
+
+.matcher-cta p {
+    color: #aaa;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   MATCHER MODAL
+===================================================== */
+
+#matcherModal {
+    display: none;
+
+    position: fixed;
+
+    z-index: 1000;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.8);
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+.modal-box {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #15151c;
+
+    border: 1px solid #30303a;
+
+    border-radius: 20px;
+
+    padding: 40px;
+}
+
+.close-btn {
+    position: absolute;
+
+    right: 18px;
+    top: 15px;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   QUESTIONS
+===================================================== */
+
+.question {
+    margin: 35px 0;
+}
+
+.question h3 {
+    margin-bottom: 15px;
+}
+
+.answer {
+    display: block;
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin: 10px 0;
+
+    background: #202028;
+
+    color: white;
+
+    border: 1px solid #34343e;
+
+    border-radius: 10px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.answer:hover {
+    border-color: white;
+}
+
+.answer.selected {
+    border-color: #e62b1e;
+
+    background: #30303a;
+}
+
+
+/* =====================================================
+   RESULT
+===================================================== */
+
+.result {
+    display: none;
+
+    text-align: center;
+}
+
+.result h2 {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.result p {
+    color: #bbb;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   PREFERENCES
+===================================================== */
+
+#preferences {
+    padding: 100px 20px;
+}
+
+.preference-box {
+    max-width: 500px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #18181d,
+            #111116
+        );
+
+    border: 1px solid #292932;
+
+    border-radius: 18px;
+}
+
+.preference-box label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    margin-top: 20px;
+
+    font-weight: bold;
+}
+
+.preference-box select {
+    width: 100%;
+
+    padding: 13px;
+
+    background: #202028;
+
+    color: white;
+
+    border: 1px solid #34343e;
+
+    border-radius: 8px;
+}
+
+.preference-box .primary-btn {
+    margin-top: 30px;
+}
+
+.error {
+    color: #ff7777;
+
+    margin-top: 15px;
+}
+
+
+/* =====================================================
+   APPLICATION
+===================================================== */
+
+#application {
+    display: none;
+
+    padding: 100px 20px;
+}
+
+.application-box {
+    max-width: 650px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #18181d,
+            #111116
+        );
+
+    border: 1px solid #292932;
+
+    border-radius: 18px;
+}
+
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+
+.progress-container {
+    margin-bottom: 35px;
+}
+
+.progress-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+}
+
+.progress-bar {
+    height: 8px;
+
+    background: #292932;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+#progressFill {
+    height: 100%;
+
+    width: 0%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #e62b1e,
+            #d4af37
+        );
+
+    transition: 0.3s;
+}
+
+
+/* =====================================================
+   APPLICATION FORM
+===================================================== */
+
+#applicationForm label {
+    display: block;
+
+    margin-top: 20px;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+}
+
+#applicationForm input,
+#applicationForm select,
+#applicationForm textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    background: #202028;
+
+    color: white;
+
+    border: 1px solid #34343e;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+#applicationForm input:focus,
+#applicationForm select:focus,
+#applicationForm textarea:focus {
+    border-color: #e62b1e;
+
+    box-shadow:
+        0 0 0 2px rgba(230, 43, 30, 0.08);
+}
+
+#applicationForm textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    margin-top: 30px;
+
+    width: 100%;
+}
+
+
+/* =====================================================
+   CONFIRMATION
+===================================================== */
+
+#confirmation {
+    display: none;
+
+    min-height: 100vh;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(230, 43, 30, 0.08),
+            transparent 45%
+        );
+}
+
+.confirmation-box {
+    max-width: 600px;
+}
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #d4af37
+        );
+
+    color: #0b0b0f;
+
+    font-size: 35px;
+}
+
+.confirmation-box h2 {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.confirmation-box p {
+    color: #aaa;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   FLOATING GOLDEN DOTS
+===================================================== */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    top: 7%;
+    left: 8%;
+
+    width: 7px;
+    height: 7px;
+
+    background: #d4af37;
+
+    border-radius: 50%;
+
+    box-shadow:
+        120px 80px 0 #d4af37,
+        300px 20px 0 #d4af37,
+        500px 150px 0 #d4af37,
+        700px 60px 0 #d4af37,
+        850px 250px 0 #d4af37,
+        200px 400px 0 #d4af37,
+        600px 450px 0 #d4af37,
+        1000px 330px 0 #d4af37,
+        750px 520px 0 #d4af37;
+
+    opacity: 0.5;
+
+    animation:
+        floatDots 8s ease-in-out infinite alternate;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+@keyframes floatDots {
+
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-25px);
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    #landing {
+        padding: 30px 20px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .small-heading {
+        font-size: 12px;
+
+        letter-spacing: 3px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .modal-box {
+        padding: 25px;
+    }
+
+    .team-card {
+        width: 100%;
+    }
+
+    .confirmation-box h2 {
+        font-size: 32px;
+    }
+}
