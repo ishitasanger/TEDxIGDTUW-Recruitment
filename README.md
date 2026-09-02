@@ -33,14 +33,21 @@ The teams showcased in the portal are:
 I identified that students may be interested in joining TEDxIGDTU but may not know:
 
 - What each team actually does.
+- What kind of work and responsibilities are involved in each team.
 - Which team matches their interests and skills.
-- What the recruitment process involves.
+- What they can expect to work on after joining.
+- What previous teams have worked on during TEDxIGDTU events.
 
 A traditional Google Form mainly focuses on collecting responses and does not provide much context or interaction before the application.
 
-Instead of simply replacing the Google Form with another form, I wanted to make the recruitment experience more **informative, interactive and student-friendly**.
+Instead of simply replacing the Google Form with another form, I wanted to make the recruitment experience more informative and interactive.
 
-The team matcher especially helps students who are unsure about which team would suit them.
+The portal is designed to help students **understand the teams first and apply second**.
+
+The **Find Your Team** matcher provides an additional way for students who are unsure about their fit to discover a suitable team based on their interests.
+
+With more time, the team discovery section would be expanded further to include detailed team responsibilities, examples of previous work and events, relevant skills, and a clearer picture of what working in each team is actually like.
+
 
 ## Key Technical & Design Decisions
 
@@ -121,10 +128,10 @@ I tested and modified the generated code while developing the feature and review
 Due to the 60–90 minute constraint, I focused on building a functional frontend prototype.
 
 With more time, I would add:
-
+- **Detailed Team Discovery:** Expand the team showcase into a more detailed discovery experience where students can learn exactly what each TEDxIGDTU team does, the kind of work and responsibilities involved, skills that are useful for the team, examples of work from previous events, and what a student can expect after joining. This would help students make informed team preferences instead of choosing a team based only on its name.
 - **Backend/database integration** for securely storing applications.
 - **Admin dashboard** for the TEDx team to view and manage applications.
-- **Application status tracking** such as Submitted, Under Review, Shortlisted and Selected.
+- **Application Status & Interview Notifications:** Add an applicant dashboard where students can track their application through stages such as **Submitted → Under Review → Shortlisted → Interview Scheduled → Selected/Not Selected**. When a student is shortlisted, they would receive an interview notification with the relevant details. **Further interview details and communication would be handled through WhatsApp.**
 - Team-specific application questions based on the selected preferences.
 - Email confirmation after application submission.
 - Authentication for applicants and administrators.
