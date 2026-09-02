@@ -2,12 +2,13 @@
 
 ## What I Built
 
-I built a web-based recruitment portal for TEDxIGDTU as an alternative to a traditional Google Form.
+I built an interactive **TEDxIGDTU Recruitment Portal** that goes beyond a traditional Google Form. A normal Google Form is mostly static, it collects responses but does not really explain **what each team/role does, what kind of work students will be involved in, or what they can expect after joining**. It also does not provide an interactive way to guide students who are unsure about their choice.
 
-The recruitment flow is designed as:
+My aim was to turn the recruitment process into a **guided experience rather than just a form**. The basic problem I wanted to solve is the **ambiguity students face when trying to understand different roles and deciding where they fit**. The website is intended to give students clarity about each team before they apply, including its responsibilities, the type of work involved, skills that are useful, examples of past events/work, and the **skills and experience they could develop after joining**.
 
-**Explore → Discover → Match → Apply**
+In the current prototype, I have implemented the team showcase, preferences, recruitment form, progress tracking, and an interactive **Team Matcher**. The detailed team information and **application status tracking** are part of my future scope. The application status feature would allow students to know what stage their application is at—for example, **Submitted → Under Review → Shortlisted → Interview Scheduled → Selected/Not Selected**—and notify them when they are shortlisted or an interview is scheduled. Further interview details and communication can then be handled through **WhatsApp**.
 
+If a student is still unsure about which team suits them, they can take the **Team Matcher quiz**. Based on their answers, it recommends a suitable team and explains **why that team may be a good fit**, providing an additional layer of guidance.
 
 ### Current Features
 
@@ -34,24 +35,19 @@ The teams showcased in the portal are:
 
 ## Problem & Why This Feature?
 
-I identified that students may be interested in joining TEDxIGDTU but may not know:
+I chose this feature based on my **own experience** while considering recruitment. I was personally confused about **which team or role I should apply for** and wanted more clarity about what each team actually does. This made me realize that there are probably many other students who face the same confusion.
 
-- What each team actually does.
-- What kind of work and responsibilities are involved in each team.
-- Which team matches their interests and skills.
-- What they can expect to work on after joining.
-- What previous teams have worked on during TEDxIGDTU events.
+A traditional Google Form mainly focuses on collecting responses and does not provide much context or interaction before the application. It does not necessarily tell students **what they are actually signing up for**, what work they will perform, what skills are useful, what previous teams have worked on, or what they could learn and develop after joining.
 
-A traditional Google Form mainly focuses on collecting responses and does not provide much context or interaction before the application.
+Instead of simply replacing the Google Form with another form, I wanted to make the recruitment experience more **informative, interactive and guided**.
 
-Instead of simply replacing the Google Form with another form, I wanted to make the recruitment experience more informative and interactive.
+The portal is designed around the idea:
 
-The portal is designed to help students **understand the teams first and apply second**.
+**Understand the teams first → Find where you fit → Apply with confidence**
 
-The **Find Your Team** matcher provides an additional way for students who are unsure about their fit to discover a suitable team based on their interests.
+The **Find Your Team** matcher provides an additional layer of guidance for students who are still unsure. Based on their interests and answers, it recommends a suitable team and explains **why that team may be a good fit**.
 
-With more time, the team discovery section would be expanded further to include detailed team responsibilities, examples of previous work and events, relevant skills, and a clearer picture of what working in each team is actually like.
-
+With more time, I would expand the team discovery section to provide detailed information about each team's responsibilities, actual work, required/useful skills, previous events and work, and the **skills and experience students can develop after joining**. I would also add application status tracking so students know what is happening after they submit their application, including shortlisting and interview updates.
 
 ## Key Technical & Design Decisions
 
@@ -132,15 +128,24 @@ I tested and modified the generated code while developing the feature and review
 Due to the 60–90 minute constraint, I focused on building a functional frontend prototype.
 
 With more time, I would add:
-- **Detailed Team Discovery:** Expand the team showcase into a more detailed discovery experience where students can learn exactly what each TEDxIGDTU team does, the kind of work and responsibilities involved, skills that are useful for the team, examples of work from previous events, and what a student can expect after joining. This would help students make informed team preferences instead of choosing a team based only on its name.
-- **Backend/database integration** for securely storing applications.
-- **Admin dashboard** for the TEDx team to view and manage applications.
-- **Application Status & Interview Notifications:** Add an applicant dashboard where students can track their application through stages such as **Submitted → Under Review → Shortlisted → Interview Scheduled → Selected/Not Selected**. When a student is shortlisted, they would receive an interview notification with the relevant details. **Further interview details and communication would be handled through WhatsApp.**
-- Team-specific application questions based on the selected preferences.
-- Email confirmation after application submission.
-- Authentication for applicants and administrators.
-- Improved form validation and accessibility.
-- More refined animations and micro-interactions.
+
+- **Detailed Team Discovery:** Expand the team showcase into a more detailed discovery experience where students can learn exactly what each TEDxIGDTU team does, the kind of work and responsibilities involved, skills that are useful for the team, examples of work from previous events, and what a student can expect to learn and develop after joining. This would help students make informed team preferences instead of choosing a team based only on its name.
+
+- **Application Status & Interview Notifications:** Add an applicant dashboard where students can track their application through stages such as **Submitted → Under Review → Shortlisted → Interview Scheduled → Selected/Not Selected**. Students would be notified when their application is shortlisted or when an interview is scheduled, so they are not left wondering about what happens after submitting their application. Further interview details and communication can then be handled through **WhatsApp**.
+
+- **Backend/Database Integration:** Replace Local Storage with a backend and database so applications can be securely stored and accessed centrally by the TEDxIGDTU recruitment team.
+
+- **Admin Dashboard:** Provide the recruitment team with a centralized dashboard to view, filter, shortlist and manage applications.
+
+- **Team-Specific Application Questions:** Introduce questions relevant to the student's selected team preferences to make the application more meaningful and role-specific.
+
+- **Email Confirmation & Notifications:** Send automated confirmations and important recruitment updates to applicants.
+
+- **Authentication:** Add secure authentication for applicants and administrators.
+
+- **Improved Form Validation & Accessibility:** Add stronger input validation and improve accessibility across the portal.
+
+- **More Refined UI Interactions:** Add further animations and micro-interactions while keeping the interface focused on usability.
 
 ## Deployment
 
