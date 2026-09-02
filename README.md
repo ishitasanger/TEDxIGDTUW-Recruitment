@@ -8,15 +8,19 @@ The recruitment flow is designed as:
 
 **Explore → Discover → Match → Apply**
 
-Students can:
+
+### Current Features
+
+Students can currently:
 
 - Explore the different TEDxIGDTU teams and understand their roles.
 - Use an interactive **"Find Your Team"** quiz if they are unsure where they fit.
-- Select up to **two team preferences**.
+- Receive a team recommendation based on their quiz responses.
+- Select up to **two team preferences** without being able to select the same team twice.
 - Fill out a structured recruitment application.
-- Track their application completion using a dynamic **progress bar**.
-- Automatically save their application data using **Local Storage**.
-- Receive a confirmation screen after submitting the application.
+- Track application completion using a dynamic **progress bar**.
+- Save their application draft in the browser using **Local Storage**.
+- Submit their application and receive a confirmation screen.
 
 The teams showcased in the portal are:
 
@@ -108,7 +112,7 @@ I tested and modified the generated code while developing the feature and review
 
 ### Team Showcase
 
-![alt text](image-1.png)
+![alt text](image-6.png)
 ![alt text](image-2.png)
 
 ### Team Matcher
